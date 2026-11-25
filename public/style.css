@@ -1,0 +1,25 @@
+  body { font: 18px/1.4 system-ui, sans-serif; background: #fff; color: #222; max-width: 600px; margin: 0 auto; padding: 16px; }
+  h1 { text-align: center; }
+  .buttons { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+  button { font: inherit; padding: 8px 14px; border: 2px solid #2563eb; border-radius: 8px; background: #fff; color: #2563eb; cursor: pointer; }
+  button[aria-pressed="true"] { background: #2563eb; color: #fff; }
+  textarea, input[type=text], output { box-sizing: border-box; width: 100%; font: inherit; padding: 10px; border: 2px solid #bbb; border-radius: 8px; }
+  input[type=range] { width: 100%; }
+  label { display: block; font-weight: bold; margin: 16px 0 4px; }
+  output { display: block; min-height: 3.5em; background: #fef9c3; white-space: pre-wrap; overflow-wrap: anywhere; }
+  #chart { display: grid; grid-template-columns: repeat(13, 1fr); gap: 4px; margin-top: 16px; text-align: center; }
+  #chart div { border: 1px solid #ccc; border-radius: 4px; font-size: 15px; }
+  #chart b { display: block; color: #2563eb; }
+  pre { overflow-x: auto; font-size: 18px; }
+  [hidden] { display: none !important; }
+  input[type=password] { box-sizing: border-box; width: 100%; font: inherit; padding: 10px; border: 2px solid #bbb; border-radius: 8px; }
+  form button { margin-top: 12px; }
+  .message { border: 2px solid #bbb; border-radius: 8px; padding: 12px; margin-bottom: 16px; }
+  .message h3 { margin: 0 0 4px; }
+  .secret { background: #fef9c3; padding: 10px; border-radius: 8px; white-space: pre-wrap; overflow-wrap: anywhere; }
+  .clue { background: #dbeafe; padding: 10px; border-radius: 8px; font-weight: bold; }
+  .key { display: grid; grid-template-columns: repeat(13, 1fr); gap: 4px; text-align: center; }
+  .key div { border: 1px solid #ccc; border-radius: 4px; font-size: 15px; overflow: hidden; }
+  .key b { display: block; color: #2563eb; }
+  .error { color: #b91c1c; font-weight: bold; }
+  header { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 16px; }

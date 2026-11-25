@@ -1,0 +1,11 @@
+{
+  "name": "cipher-lab",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Kids experiment with ciphers and send each other secret messages",
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  }
+}

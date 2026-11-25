@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cipher Lab</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<h1>🔐 Cipher Lab</h1>
+
+<section id="signedOut" hidden>
+  <div class="buttons">
+    <button type="button" id="showLogin" aria-pressed="true">Sign in</button>
+    <button type="button" id="showRegister" aria-pressed="false">Create account</button>
+  </div>
+  <p id="authHelp"></p>
+  <form id="authForm">
+    <label for="username">Username</label>
+    <input type="text" id="username" maxlength="20" autocomplete="username" autocapitalize="none" required>
+    <label for="password">Password</label>
+    <input type="password" id="password" maxlength="100" autocomplete="current-password" required>
+    <button id="authButton">Sign in</button>
+    <p id="authError" class="error" role="alert"></p>
+  </form>
+</section>
+
+<section id="signedIn" hidden>
+  <header>
+    <span>Signed in as <b id="me"></b></span>
+    <button type="button" id="logout">Sign out</button>
+  </header>
+  <div class="buttons">
+    <button type="button" id="showLab" aria-pressed="true">✏️ Make a message</button>
+    <button type="button" id="showInbox" aria-pressed="false">📬 Inbox</button>
+  </div>
+
+<div id="lab">
+<div class="buttons" id="ciphers"></div>
+<p id="about"></p>
+
+<div class="buttons">
+  <button id="lock" aria-pressed="true">🔒 Hide a message</button>
+  <button id="unlock" aria-pressed="false">🔓 Read a secret</button>
+</div>
+
+<div id="shiftBox">
+  <label for="shift">Shift: <span id="shiftValue">3</span></label>
+  <input type="range" id="shift" min="1" max="25" value="3">
+</div>
+<div id="wordBox">
+  <label for="word">Secret word (letters only)</label>
+  <input type="text" id="word" value="TIGER" autocomplete="off">
+</div>
+<div id="railBox">
+  <label for="rails">Rows: <span id="railsValue">3</span></label>
+  <input type="range" id="rails" min="2" max="6" value="3">
+</div>
+
+<label for="input" id="inputLabel">Your message</label>
+<textarea id="input" rows="3" maxlength="500">Hello world!</textarea>
+
+<label for="result">Result</label>
+<output id="result"></output>
+
+<form id="sendForm">
+  <label for="to">Send it to (their username)</label>
+  <input type="text" id="to" maxlength="20" autocomplete="off" autocapitalize="none" required>
+  <button>📨 Send secret message</button>
+  <p id="sendStatus" role="status"></p>
+</form>
+
+<div id="chartTitle"></div>
+<div id="chart"></div>
+
+</div>
+
+<div id="inbox" hidden>
+  <button type="button" id="refresh">Check for new messages</button>
+  <p id="inboxStatus" role="status"></p>
+  <div id="messages"></div>
+</div>
+</section>
+
+<script src="/ciphers.js"></script>
+<script src="/lab.js"></script>
+<script src="/app.js"></script>
+</body>
+</html>
